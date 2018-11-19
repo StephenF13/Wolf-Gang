@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "BodegaSans";
+    src: url("../fonts/BodegaSans_Black.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-size: 1.6rem;
+    background-image: url("../img/bg_body.svg");
+    background-color: #444444;
+    color: grey;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 25px;
+}
+
+h1, h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "BodegaSans";
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 3rem;
+    word-spacing: 2px;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.colorTitle {
+    color: #FF9D00;
+}
+
+/*réparer le flux*/
+.repairFlux {
+    clear: both;
+}
+
+/* img responsive */
+
+.imgResponsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(150deg, white 0%, white 50%, #333 50%, #333 100%);
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 2.5rem;
+}
+
+nav a {
+
+    text-align: right;
+    padding: 30px 15px;
+    font-family: "BodegaSans";
+}
+
+.logo {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+/* main */
+
+main {
+    text-align: center;
+}
+
+/* section moto */
+
+h3 {
+    color: #FF9D00;
+    border-bottom: 2px solid #FF9D00;
+    font-size: 2.5rem;
+}
+
+section.moto {
+    background-color: white;
+    padding: 20px;
+    margin: 25px 20px;
+    line-height: 1.8;
+}
+
+section.moto a {
+    text-decoration: none;
+    color: white;
+    background-color: #FF9D00;
+    padding: 10px 30px;
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    transition: all 0.5s ease-out;
+}
+
+section.moto a:hover {
+    background-color: white;
+    border: 1px solid #FF9D00;
+    color: #FF9D00;
+    transform: scale(1.1);
+    border-radius: 50%;
+    padding: 9px 30px;
+}
+
+section.moto img {
+    transition: all 0.5s ease-out;
+}
+
+section.moto img:hover {
+    transform: rotate(-30deg) scale(0.6);
+}
+
+/* slider */
+
+.flex-control-paging li a.flex-active {
+    background: red;
+    cursor: default;
+    width: 14px;
+    height: 14px;
+}
+
+.flex-direction-nav a.flex-next::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f152';
+    color: lightblue;
+}
+
+.flex-direction-nav .flex-prev::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f191';
+    color: lightblue;
+}
+
+.flex-direction-nav a::before {
+    line-height: 1;
+}
+
+/* section presentation */
+
+section.presentation {
+    color: white;
+    line-height: 1.8;
+}
+
+section.presentation a {
+    color: white;
+    display: block;
+    margin: 50px 0;
+    transition: all 2s ease-out;
+}
+
+section.presentation a:hover {
+    color: blue;
+    transform: rotate(720deg);
+    border-radius: 50%;
+}
+
+.videoPresentation video {
+    max-width: 100%;
+    height: auto;
+}
+
+.yT {
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+/*footer*/
+
+footer h4 {
+    font-size: 2rem;
+}
+
+footer a {
+    color: white;
+
+}
+
+footer > a {
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    box-shadow: 0px 0px 5px #333;
+    padding: 50px;
+}
+
+.smallFooter {
+    margin: 30px 20px 0 20px;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/*  media queries */
+
+@media all and (min-width: 700px) {
+
+    header {
+        background: linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+    }
+
+    .logo {
+        float: left;
+        padding: 30px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        padding: 0;
+        margin: 0;
+        display: block;
+        line-height: 0;
+        font-size: 0;
+    }
+
+}
+
+@media all and (min-width: 1200px) {
+
+    .wrapper {
+        padding: 0;
+
+    }
+
+    .wrapperDesktop {
+        max-width: 1500px;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .logo {
+        margin: 20px 150px;
+    }
+
+    nav a {
+        padding: 20px 120px;
+
+    }
+
+    section.moto {
+        float: left;
+        width: 22%;
+        margin: 40px 0;
+    }
+
+    section.moto + section.moto {
+        margin-left: 4%;
+    }
+
+    section.presentation {
+        text-align: left;
+
+    }
+
+    .contentPresentation {
+        float: left;
+        width: 48%
+    }
+
+    .videoPresentation {
+        float: right;
+        width: 48%;
+    }
+
+    section.presentation a {
+        color: white;
+        display: inline-block;
+        margin: 50px 50px;
+    }
+
+}
